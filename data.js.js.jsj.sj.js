@@ -1,15 +1,15 @@
 (function (Scratch) {
   'use strict';
 
-  class MyAPIExtension {
+  class IntergramXDataExt {
     constructor() {
-      this.data = {}; // Локальное хранилище для кеширования
+      this.data = {};
     }
 
     getInfo() {
       return {
-        id: 'myapi',
-        name: 'Vercel JSON API',
+        id: 'IntergramXDataExt',
+        name: 'Api for intergramX',
         color1: '#4CAF50',
         color2: '#45a049',
         blocks: [
@@ -130,5 +130,5 @@
     }
   }
 
-  Scratch.extensions.register(new MyAPIExtension());
+  Scratch.extensions.register(new IntergramXDataExt());
 })(Scratch);
