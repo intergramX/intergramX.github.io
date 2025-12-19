@@ -51,7 +51,7 @@
 
     async getData() {
       try {
-        const response = await fetch('/api/data');
+        const response = await fetch('https://intergtamx-data-server.vercel.app/');
         if (!response.ok) {
           return 'Ошибка: ' + response.status;
         }
@@ -72,7 +72,7 @@
       }
 
       try {
-        const response = await fetch('/api/data', {
+        const response = await fetch('https://intergtamx-data-server.vercel.app/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(jsonData),
@@ -98,7 +98,7 @@
       }
 
       try {
-        const response = await fetch('/api/data', {
+        const response = await fetch('https://intergtamx-data-server.vercel.app/', {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(updates),
@@ -117,7 +117,7 @@
 
     async clearData() {
       try {
-        const response = await fetch('/api/data', { method: 'DELETE' });
+        const response = await fetch('https://intergtamx-data-server.vercel.app/', { method: 'DELETE' });
         if (response.ok) {
           this.data = {};
           return 'Очищено';
